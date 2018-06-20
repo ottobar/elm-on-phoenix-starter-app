@@ -42,3 +42,16 @@ Steps used to create this starter app:
     * `lib/#{app_name_web}/templates/page/index.html.eex`
   * Modify page controller test so that it can pass `test/#{app_name_web}/controllers/page_controller_test.exs`
   * Add default mix test task to `.vscode/tasks.json`
+  * Remove `assets/css/phoenix.css`
+  * In `assets` directory, `mkdir -p vendor/css vendor/js`
+  * Download Bootstrap and put compiled and minified css and js files into `assets/vendor/css` and `assets/vendor/js` directories, respectively
+  * Download compressed, production jQuery and put into `assets/vendor/js` directory
+  * Download unpkg, minified Popper.js and put into `assets/vendor/js` directory
+  * Download Font Awesome
+    * Put `web-fonts-with-css/css/fontawesome-all.min.css` into `assets/vendor/css` directory
+    * Put `web-fonts-with-css/webfonts` directory and contents into `assets/static` directory
+  * Modify `brunch-config.js` to bundle vendor and app Javascript files separately
+  * Modify `lib/#{app_name_web}/templates/layout/app.html.eex` for Bootstrap and include vendor Javascript bundle
+  * Add `webfonts` directory in `lib/#{app_name_web}/endpoint.ex` to the static plug
+  * Modify `assets/css/app.css` to include margin for navbar
+  * Modify `assets/elm/src/Main.elm` for starter template with Bootstrap and Font Awesome
