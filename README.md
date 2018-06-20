@@ -5,6 +5,11 @@ This starter app uses:
   * (Optional) [Visual Studio Code](https://code.visualstudio.com) for code editing
   * (Optional) [ElixirLS for VS Code](https://github.com/JakeBecker/vscode-elixir-ls) for Elixir support in VS Code
   * [elm-brunch](https://github.com/madsflensted/elm-brunch) Brunch plugin to compile Elm code
+  * [Bootstrap](https://getbootstrap.com) for styling and components
+  * [Font Awesome](https://fontawesome.com) for icons
+
+TODO:
+  * Add [elm-test](https://github.com/elm-community/elm-test) to unit test Elm code
 
 
 Steps used to create this starter app:
