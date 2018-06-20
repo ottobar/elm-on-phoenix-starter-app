@@ -1,7 +1,9 @@
 # Elm on Phoenix Starter App
 
 This starter app uses:
-  * [asdf](https://github.com/asdf-vm/asdf) for version management
+  * (Optional) [asdf](https://github.com/asdf-vm/asdf) for version management
+  * (Optional) [Visual Studio Code](https://code.visualstudio.com) for code editing
+  * (Optional) [ElixirLS for VS Code](https://github.com/JakeBecker/vscode-elixir-ls) for Elixir support in VS Code
 
 
 Steps used to create this starter app:
@@ -14,3 +16,6 @@ Steps used to create this starter app:
   * `mix deps.get`
   * `mix ecto.create`
   * `cd assets && npm install`
+  * Configure task for Visual Studio Code to run the Phoenix server
+  * Ignore ElixirLS build artifacts directory `.elixir_ls`
+  * Get production configuration from environment rather than `config/prod.secret.exs`

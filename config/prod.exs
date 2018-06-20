@@ -59,6 +59,14 @@ config :logger, level: :info
 #     config :elm_on_phoenix_starter_app, ElmOnPhoenixStarterAppWeb.Endpoint, server: true
 #
 
-# Finally import the config/prod.secret.exs
-# which should be versioned separately.
-import_config "prod.secret.exs"
+config :elm_on_phoenix_starter_app, ElmOnPhoenixStarterAppWeb.Endpoint,
+  secret_key_base: System.get_env("SECRET_KEY_BASE")
+
+# Configure your database
+config :elm_on_phoenix_starter_app, ElmOnPhoenixStarterApp.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: System.get_env("DATABASE_USERNAME"),
+  password: System.get_env("DATABASE_PASSWORD"),
+  host: System.get_env("DATABASE_HOST"),
+  database: System.get_env("DATABASE_NAME"),
+  pool_size: System.get_env("DATABASE_POOL_SIZE")
