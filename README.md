@@ -1,20 +1,16 @@
-# ElmOnPhoenixStarterApp
+# Elm on Phoenix Starter App
 
-To start your Phoenix server:
+This starter app uses:
+  * [asdf](https://github.com/asdf-vm/asdf) for version management
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Steps used to create this starter app:
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
-
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+  * `mix phx.new #{app_name}`
+  * `cd #{app_name}`
+  * `asdf local erlang #{erlang_version}`
+  * `asdf local elixir #{elixir_version}`
+  * `asdf local nodejs #{nodejs_version}`
+  * `mix deps.get`
+  * `mix ecto.create`
+  * `cd assets && npm install`
