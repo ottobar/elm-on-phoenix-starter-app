@@ -22,6 +22,5 @@ npm-debug.log
 # ElixirLS build artifacts
 /.elixir_ls
 
-# Elm build artifacts, but keep dependency lock file
+# Elm build artifacts
 /assets/elm/elm-stuff/*
-!/assets/elm/elm-stuff/exact-dependencies.json

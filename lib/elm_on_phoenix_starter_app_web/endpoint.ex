@@ -7,8 +7,7 @@ defmodule ElmOnPhoenixStarterAppWeb.Endpoint do
   #
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
-  plug(
-    Plug.Static,
+  plug(Plug.Static,
     at: "/",
     from: :elm_on_phoenix_starter_app,
     gzip: false,
@@ -25,8 +24,7 @@ defmodule ElmOnPhoenixStarterAppWeb.Endpoint do
 
   plug(Plug.Logger)
 
-  plug(
-    Plug.Parsers,
+  plug(Plug.Parsers,
     parsers: [:urlencoded, :multipart, :json],
     pass: ["*/*"],
     json_decoder: Poison
@@ -38,11 +36,10 @@ defmodule ElmOnPhoenixStarterAppWeb.Endpoint do
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
-  plug(
-    Plug.Session,
+  plug(Plug.Session,
     store: :cookie,
     key: "_elm_on_phoenix_starter_app_key",
-    signing_salt: "SjScpVyx"
+    signing_salt: "jz2NU7ZJ"
   )
 
   plug(ElmOnPhoenixStarterAppWeb.Router)

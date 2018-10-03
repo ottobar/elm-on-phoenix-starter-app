@@ -8,7 +8,7 @@ exports.config = {
             },
             order: {
                 before: [
-                    "vendor/js/jquery.min.js",
+                    "vendor/js/jquery.slim.min.js",
                     "vendor/js/popper.min.js",
                     "vendor/js/bootstrap.min.js"
                 ]
@@ -46,9 +46,9 @@ exports.config = {
         elmBrunch: {
             elmFolder: "elm",
             mainModules: ["src/Main.elm"],
-            executablePath: "../node_modules/elm/binwrappers",
+            executablePath: "../node_modules/elm/bin",
             outputFolder: "../js",
-            makeParameters: ["--warn"]
+            optimize: true
         }
     },
 

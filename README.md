@@ -7,6 +7,16 @@ This starter app uses:
   * [elm-brunch](https://github.com/madsflensted/elm-brunch) Brunch plugin to compile Elm code
   * [Bootstrap](https://getbootstrap.com) for styling and components
   * [Font Awesome](https://fontawesome.com) for icons
+  * [PostgreSQL](https://www.postgresql.org) for database (using `postgres` user)
+    
+    By default, PostgreSQL sets up a superuser with username and password of "postgres". If you don’t have it configured this way, you can do so by running:
+
+        createdb postgres
+        psql postgres
+        CREATE USER postgres;
+        ALTER USER postgres PASSWORD 'postgres';
+        ALTER USER postgres WITH SUPERUSER;
+
 
 TODO:
   * Add [elm-test](https://github.com/elm-community/elm-test) to unit test Elm code
@@ -27,12 +37,11 @@ Steps used to create this starter app:
   * Get production configuration from environment rather than `config/prod.secret.exs`
   * Still in `assets` directory...
   * `npm install --save-dev elm elm-brunch`
-  * `mkdir -p elm/src`
+  * `mkdir elm`
   * Update `brunch-config.js` watched paths to include `elm` and add the elm-brunch plugin config
   * `cd elm`
-  * `../node_modules/elm/binwrappers/elm-package install --yes`
-  * Ignore Elm build artifacts directory `elm-stuff`, but keep the `elm-stuff/exact-dependencies.json` file
-  * Change the source directory from `.` to `src` in the `source-directories` in `assets/elm/elm-package.json`
+  * `../node_modules/elm/bin/elm init` to create `elm.json` and `src` directory
+  * Ignore Elm build artifacts directory `elm-stuff`
   * Create `assets/elm/src/Main.elm`
   * Create and add `assets/static/images/.gitkeep`
   * Remove `assets/static/images/phoenix.png`
@@ -45,7 +54,7 @@ Steps used to create this starter app:
   * Remove `assets/css/phoenix.css`
   * In `assets` directory, `mkdir -p vendor/css vendor/js`
   * Download Bootstrap and put compiled and minified css and js files into `assets/vendor/css` and `assets/vendor/js` directories, respectively
-  * Download compressed, production jQuery and put into `assets/vendor/js` directory
+  * Download slim, compressed, production jQuery and put into `assets/vendor/js` directory
   * Download unpkg, minified Popper.js and put into `assets/vendor/js` directory
   * Download Font Awesome
     * Put `web-fonts-with-css/css/fontawesome-all.min.css` into `assets/vendor/css` directory

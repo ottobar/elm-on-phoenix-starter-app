@@ -1,29 +1,8 @@
 module Main exposing (main)
 
+import Browser
 import Html exposing (..)
 import Html.Attributes exposing (attribute, class, href, id, type_)
-
-
--- MAIN
-
-
-main : Program Never Model Msg
-main =
-    Html.program
-        { init = init
-        , update = update
-        , view = view
-        , subscriptions = subscriptions
-        }
-
-
-
--- INIT
-
-
-init : ( Model, Cmd Msg )
-init =
-    ( "Hello, Elm on Phoenix Starter App!", Cmd.none )
 
 
 
@@ -32,6 +11,15 @@ init =
 
 type alias Model =
     String
+
+
+
+-- INIT
+
+
+init : () -> ( Model, Cmd Msg )
+init _ =
+    ( "Hello, Elm on Phoenix Starter App!", Cmd.none )
 
 
 
@@ -95,3 +83,17 @@ view model =
 subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.none
+
+
+
+-- MAIN
+
+
+main : Program () Model Msg
+main =
+    Browser.element
+        { init = init
+        , update = update
+        , view = view
+        , subscriptions = subscriptions
+        }

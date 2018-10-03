@@ -20,7 +20,7 @@ import "phoenix_html"
 
 // import socket from "./socket"
 
-// Import and embed Elm application
-import Elm from "./main.js"
-const elmDiv = document.getElementById("elm-main"),
-    elmApp = Elm.Main.embed(elmDiv);
+// Embed Elm application
+var app = Elm.Main.init({
+    node: document.getElementById('elm-main')
+});
