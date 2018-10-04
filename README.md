@@ -38,7 +38,7 @@ Steps used to create this starter app:
   * Still in `assets` directory...
   * `npm install --save-dev elm elm-brunch`
   * `mkdir elm`
-  * Update `brunch-config.js` watched paths to include `elm` and add the elm-brunch plugin config
+  * Update `brunch-config.js` joined JavaScript files, watched paths to include `elm`, and add elm-brunch plugin config
   * `cd elm`
   * `../node_modules/elm/bin/elm init` to create `elm.json` and `src` directory
   * Ignore Elm build artifacts directory `elm-stuff`
