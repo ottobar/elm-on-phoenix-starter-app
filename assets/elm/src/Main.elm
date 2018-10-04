@@ -1,6 +1,6 @@
 module Main exposing (main)
 
-import Browser
+import Browser exposing (Document)
 import Html exposing (..)
 import Html.Attributes exposing (attribute, class, href, id, type_)
 
@@ -45,35 +45,40 @@ update msg model =
 -- VIEW
 
 
-view : Model -> Html Msg
+view : Model -> Document Msg
 view model =
-    div []
-        [ nav [ class "navbar navbar-expand-md navbar-dark fixed-top bg-dark" ]
-            [ a [ class "navbar-brand", href "#" ]
-                [ text "Navbar" ]
-            , button [ type_ "button", class "navbar-toggler", attribute "data-toggle" "collapse", attribute "data-target" "#navbar" ]
-                [ span [ class "navbar-toggler-icon" ] [] ]
-            , div [ id "navbar", class "navbar-collapse collapse" ]
-                [ ul [ class "navbar-nav" ]
-                    [ li [ class "nav-item active" ]
-                        [ a [ class "nav-link", href "#" ] [ text "Home" ] ]
-                    , li [ class "nav-item" ]
-                        [ a [ class "nav-link", href "#" ] [ text "Link" ] ]
+    { title =
+        "Hello, Elm on Phoenix Starter App!"
+    , body =
+        [ div []
+            [ nav [ class "navbar navbar-expand-md navbar-dark fixed-top bg-dark" ]
+                [ a [ class "navbar-brand", href "#" ]
+                    [ text "Navbar" ]
+                , button [ type_ "button", class "navbar-toggler", attribute "data-toggle" "collapse", attribute "data-target" "#navbar" ]
+                    [ span [ class "navbar-toggler-icon" ] [] ]
+                , div [ id "navbar", class "navbar-collapse collapse" ]
+                    [ ul [ class "navbar-nav" ]
+                        [ li [ class "nav-item active" ]
+                            [ a [ class "nav-link", href "#" ] [ text "Home" ] ]
+                        , li [ class "nav-item" ]
+                            [ a [ class "nav-link", href "#" ] [ text "Link" ] ]
+                        ]
                     ]
                 ]
-            ]
-        , main_ [ class "main" ]
-            [ div [ class "jumbotron" ]
-                [ div [ class "container text-center" ]
-                    [ h1 []
-                        [ i [ class "fas fa-code mr-3" ] []
-                        , text model
-                        , i [ class "fas fa-code ml-3" ] []
+            , main_ [ class "main" ]
+                [ div [ class "jumbotron" ]
+                    [ div [ class "container text-center" ]
+                        [ h1 []
+                            [ i [ class "fas fa-code mr-3" ] []
+                            , text model
+                            , i [ class "fas fa-code ml-3" ] []
+                            ]
                         ]
                     ]
                 ]
             ]
         ]
+    }
 
 
 
@@ -91,7 +96,7 @@ subscriptions model =
 
 main : Program () Model Msg
 main =
-    Browser.element
+    Browser.document
         { init = init
         , update = update
         , view = view

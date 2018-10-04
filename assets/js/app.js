@@ -21,6 +21,4 @@ import "phoenix_html"
 // import socket from "./socket"
 
 // Embed Elm application
-var app = Elm.Main.init({
-    node: document.getElementById('elm-main')
-});
+var app = Elm.Main.init();

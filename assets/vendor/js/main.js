@@ -4834,122 +4834,117 @@ var elm$html$Html$Attributes$href = function (url) {
 var elm$html$Html$Attributes$id = elm$html$Html$Attributes$stringProperty('id');
 var elm$html$Html$Attributes$type_ = elm$html$Html$Attributes$stringProperty('type');
 var author$project$Main$view = function (model) {
-	return A2(
-		elm$html$Html$div,
-		_List_Nil,
-		_List_fromArray(
+	return {
+		al: _List_fromArray(
 			[
 				A2(
-				elm$html$Html$nav,
-				_List_fromArray(
-					[
-						elm$html$Html$Attributes$class('navbar navbar-expand-md navbar-dark fixed-top bg-dark')
-					]),
+				elm$html$Html$div,
+				_List_Nil,
 				_List_fromArray(
 					[
 						A2(
-						elm$html$Html$a,
+						elm$html$Html$nav,
 						_List_fromArray(
 							[
-								elm$html$Html$Attributes$class('navbar-brand'),
-								elm$html$Html$Attributes$href('#')
-							]),
-						_List_fromArray(
-							[
-								elm$html$Html$text('Navbar')
-							])),
-						A2(
-						elm$html$Html$button,
-						_List_fromArray(
-							[
-								elm$html$Html$Attributes$type_('button'),
-								elm$html$Html$Attributes$class('navbar-toggler'),
-								A2(elm$html$Html$Attributes$attribute, 'data-toggle', 'collapse'),
-								A2(elm$html$Html$Attributes$attribute, 'data-target', '#navbar')
+								elm$html$Html$Attributes$class('navbar navbar-expand-md navbar-dark fixed-top bg-dark')
 							]),
 						_List_fromArray(
 							[
 								A2(
-								elm$html$Html$span,
+								elm$html$Html$a,
 								_List_fromArray(
 									[
-										elm$html$Html$Attributes$class('navbar-toggler-icon')
+										elm$html$Html$Attributes$class('navbar-brand'),
+										elm$html$Html$Attributes$href('#')
 									]),
-								_List_Nil)
-							])),
-						A2(
-						elm$html$Html$div,
-						_List_fromArray(
-							[
-								elm$html$Html$Attributes$id('navbar'),
-								elm$html$Html$Attributes$class('navbar-collapse collapse')
-							]),
-						_List_fromArray(
-							[
+								_List_fromArray(
+									[
+										elm$html$Html$text('Navbar')
+									])),
 								A2(
-								elm$html$Html$ul,
+								elm$html$Html$button,
 								_List_fromArray(
 									[
-										elm$html$Html$Attributes$class('navbar-nav')
+										elm$html$Html$Attributes$type_('button'),
+										elm$html$Html$Attributes$class('navbar-toggler'),
+										A2(elm$html$Html$Attributes$attribute, 'data-toggle', 'collapse'),
+										A2(elm$html$Html$Attributes$attribute, 'data-target', '#navbar')
 									]),
 								_List_fromArray(
 									[
 										A2(
-										elm$html$Html$li,
+										elm$html$Html$span,
 										_List_fromArray(
 											[
-												elm$html$Html$Attributes$class('nav-item active')
+												elm$html$Html$Attributes$class('navbar-toggler-icon')
 											]),
-										_List_fromArray(
-											[
-												A2(
-												elm$html$Html$a,
-												_List_fromArray(
-													[
-														elm$html$Html$Attributes$class('nav-link'),
-														elm$html$Html$Attributes$href('#')
-													]),
-												_List_fromArray(
-													[
-														elm$html$Html$text('Home')
-													]))
-											])),
+										_List_Nil)
+									])),
+								A2(
+								elm$html$Html$div,
+								_List_fromArray(
+									[
+										elm$html$Html$Attributes$id('navbar'),
+										elm$html$Html$Attributes$class('navbar-collapse collapse')
+									]),
+								_List_fromArray(
+									[
 										A2(
-										elm$html$Html$li,
+										elm$html$Html$ul,
 										_List_fromArray(
 											[
-												elm$html$Html$Attributes$class('nav-item')
+												elm$html$Html$Attributes$class('navbar-nav')
 											]),
 										_List_fromArray(
 											[
 												A2(
-												elm$html$Html$a,
+												elm$html$Html$li,
 												_List_fromArray(
 													[
-														elm$html$Html$Attributes$class('nav-link'),
-														elm$html$Html$Attributes$href('#')
+														elm$html$Html$Attributes$class('nav-item active')
 													]),
 												_List_fromArray(
 													[
-														elm$html$Html$text('Link')
+														A2(
+														elm$html$Html$a,
+														_List_fromArray(
+															[
+																elm$html$Html$Attributes$class('nav-link'),
+																elm$html$Html$Attributes$href('#')
+															]),
+														_List_fromArray(
+															[
+																elm$html$Html$text('Home')
+															]))
+													])),
+												A2(
+												elm$html$Html$li,
+												_List_fromArray(
+													[
+														elm$html$Html$Attributes$class('nav-item')
+													]),
+												_List_fromArray(
+													[
+														A2(
+														elm$html$Html$a,
+														_List_fromArray(
+															[
+																elm$html$Html$Attributes$class('nav-link'),
+																elm$html$Html$Attributes$href('#')
+															]),
+														_List_fromArray(
+															[
+																elm$html$Html$text('Link')
+															]))
 													]))
 											]))
 									]))
-							]))
-					])),
-				A2(
-				elm$html$Html$main_,
-				_List_fromArray(
-					[
-						elm$html$Html$Attributes$class('main')
-					]),
-				_List_fromArray(
-					[
+							])),
 						A2(
-						elm$html$Html$div,
+						elm$html$Html$main_,
 						_List_fromArray(
 							[
-								elm$html$Html$Attributes$class('jumbotron')
+								elm$html$Html$Attributes$class('main')
 							]),
 						_List_fromArray(
 							[
@@ -4957,35 +4952,46 @@ var author$project$Main$view = function (model) {
 								elm$html$Html$div,
 								_List_fromArray(
 									[
-										elm$html$Html$Attributes$class('container text-center')
+										elm$html$Html$Attributes$class('jumbotron')
 									]),
 								_List_fromArray(
 									[
 										A2(
-										elm$html$Html$h1,
-										_List_Nil,
+										elm$html$Html$div,
+										_List_fromArray(
+											[
+												elm$html$Html$Attributes$class('container text-center')
+											]),
 										_List_fromArray(
 											[
 												A2(
-												elm$html$Html$i,
+												elm$html$Html$h1,
+												_List_Nil,
 												_List_fromArray(
 													[
-														elm$html$Html$Attributes$class('fas fa-code mr-3')
-													]),
-												_List_Nil),
-												elm$html$Html$text(model),
-												A2(
-												elm$html$Html$i,
-												_List_fromArray(
-													[
-														elm$html$Html$Attributes$class('fas fa-code ml-3')
-													]),
-												_List_Nil)
+														A2(
+														elm$html$Html$i,
+														_List_fromArray(
+															[
+																elm$html$Html$Attributes$class('fas fa-code mr-3')
+															]),
+														_List_Nil),
+														elm$html$Html$text(model),
+														A2(
+														elm$html$Html$i,
+														_List_fromArray(
+															[
+																elm$html$Html$Attributes$class('fas fa-code ml-3')
+															]),
+														_List_Nil)
+													]))
 											]))
 									]))
 							]))
 					]))
-			]));
+			]),
+		az: 'Hello, Elm on Phoenix Starter App!'
+	};
 };
 var elm$browser$Browser$External = function (a) {
 	return {$: 1, a: a};
@@ -5276,8 +5282,8 @@ var elm$url$Url$fromString = function (str) {
 		1,
 		A2(elm$core$String$dropLeft, 8, str)) : elm$core$Maybe$Nothing);
 };
-var elm$browser$Browser$element = _Browser_element;
-var author$project$Main$main = elm$browser$Browser$element(
+var elm$browser$Browser$document = _Browser_document;
+var author$project$Main$main = elm$browser$Browser$document(
 	{as: author$project$Main$init, ay: author$project$Main$subscriptions, aA: author$project$Main$update, aC: author$project$Main$view});
 _Platform_export({'Main':{'init':author$project$Main$main(
 	elm$json$Json$Decode$succeed(0))(0)}});}(this));
