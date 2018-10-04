@@ -41,6 +41,7 @@ Steps used to create this starter app:
   * Update `brunch-config.js` joined JavaScript files, watched paths to include `elm`, and add elm-brunch plugin config
   * `cd elm`
   * `../node_modules/elm/bin/elm init` to create `elm.json` and `src` directory
+  * `../node_modules/elm/bin/elm install elm/url` to add elm/url as a direct dependency
   * Ignore Elm build artifacts directory `elm-stuff`
   * Create `assets/elm/src/Main.elm`
   * Create and add `assets/static/images/.gitkeep`
