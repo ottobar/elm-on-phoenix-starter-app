@@ -59,8 +59,8 @@ Steps used to create this starter app:
   * Download Font Awesome
     * Put `web-fonts-with-css/css/fontawesome-all.min.css` into `assets/vendor/css` directory
     * Put `web-fonts-with-css/webfonts` directory and contents into `assets/static` directory
-  * Modify `brunch-config.js` to bundle vendor and app Javascript files separately
-  * Modify `lib/#{app_name_web}/templates/layout/app.html.eex` for Bootstrap and include vendor Javascript bundle
+  * Modify `brunch-config.js` to bundle vendor, main, and app Javascript files separately
+  * Modify `lib/#{app_name_web}/templates/layout/app.html.eex` for Bootstrap and include vendor and main Javascript bundles
   * Add `webfonts` directory in `lib/#{app_name_web}/endpoint.ex` to the static plug
   * Modify `assets/css/app.css` to include margin for navbar
   * Modify `assets/elm/src/Main.elm` for starter template with Bootstrap and Font Awesome

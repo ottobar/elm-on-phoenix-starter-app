@@ -3,8 +3,9 @@ exports.config = {
     files: {
         javascripts: {
             joinTo: {
-                "js/app.js": /^(?!vendor)/,
-                "js/vendor.js": /^vendor/
+                "js/app.js": /^(?!(vendor|elm))/,
+                "js/main.js": "vendor/js/main.js",
+                "js/vendor.js": /^vendor\/js\/(?!main\.js)/
             },
             order: {
                 before: [
@@ -47,7 +48,7 @@ exports.config = {
             elmFolder: "elm",
             mainModules: ["src/Main.elm"],
             executablePath: "../node_modules/elm/bin",
-            outputFolder: "../js",
+            outputFolder: "../vendor/js",
             optimize: true
         }
     },
