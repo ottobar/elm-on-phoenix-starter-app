@@ -38,7 +38,8 @@ Steps used to create this starter app:
   * Still in `assets` directory...
   * `npm install --save-dev elm elm-brunch`
   * `mkdir elm`
-  * Update `brunch-config.js` joined JavaScript files, watched paths to include `elm`, and add elm-brunch plugin config
+  * Modify `brunch-config.js` watched paths to include `elm` and add elm-brunch plugin config
+  * Also modify `brunch-config.js` to bundle vendor, main, and app Javascript files separately
   * `cd elm`
   * `../node_modules/elm/bin/elm init` to create `elm.json` and `src` directory
   * `../node_modules/elm/bin/elm install elm/url` to add elm/url as a direct dependency
@@ -60,7 +61,6 @@ Steps used to create this starter app:
   * Download Font Awesome
     * Put `web-fonts-with-css/css/fontawesome-all.min.css` into `assets/vendor/css` directory
     * Put `web-fonts-with-css/webfonts` directory and contents into `assets/static` directory
-  * Modify `brunch-config.js` to bundle vendor, main, and app Javascript files separately
   * Modify `lib/#{app_name_web}/templates/layout/app.html.eex` for Bootstrap and include vendor and main Javascript bundles
   * Add `webfonts` directory in `lib/#{app_name_web}/endpoint.ex` to the static plug
   * Modify `assets/css/app.css` to include margin for navbar
