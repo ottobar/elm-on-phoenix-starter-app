@@ -4289,6 +4289,12 @@ function _Browser_load(url)
 		}
 	}));
 }
+var author$project$Main$ChangedUrl = function (a) {
+	return {$: 0, a: a};
+};
+var author$project$Main$ClickedLink = function (a) {
+	return {$: 1, a: a};
+};
 var elm$core$Basics$False = 1;
 var elm$core$Basics$True = 0;
 var elm$core$Result$isOk = function (result) {
@@ -4766,9 +4772,10 @@ var elm$json$Json$Decode$errorToStringHelp = F2(
 	});
 var elm$core$Platform$Cmd$batch = _Platform_batch;
 var elm$core$Platform$Cmd$none = elm$core$Platform$Cmd$batch(_List_Nil);
-var author$project$Main$init = function (_n0) {
-	return _Utils_Tuple2('Hello, Elm on Phoenix Starter App!', elm$core$Platform$Cmd$none);
-};
+var author$project$Main$init = F3(
+	function (_n0, url, navKey) {
+		return _Utils_Tuple2('Hello, Elm on Phoenix Starter App!', elm$core$Platform$Cmd$none);
+	});
 var elm$core$Platform$Sub$batch = _Platform_batch;
 var elm$core$Platform$Sub$none = elm$core$Platform$Sub$batch(_List_Nil);
 var author$project$Main$subscriptions = function (model) {
@@ -4776,7 +4783,16 @@ var author$project$Main$subscriptions = function (model) {
 };
 var author$project$Main$update = F2(
 	function (msg, model) {
-		return _Utils_Tuple2(model, elm$core$Platform$Cmd$none);
+		switch (msg.$) {
+			case 0:
+				var url = msg.a;
+				return _Utils_Tuple2(model, elm$core$Platform$Cmd$none);
+			case 1:
+				var urlRequest = msg.a;
+				return _Utils_Tuple2(model, elm$core$Platform$Cmd$none);
+			default:
+				return _Utils_Tuple2(model, elm$core$Platform$Cmd$none);
+		}
 	});
 var elm$core$Basics$identity = function (x) {
 	return x;
@@ -5282,8 +5298,8 @@ var elm$url$Url$fromString = function (str) {
 		1,
 		A2(elm$core$String$dropLeft, 8, str)) : elm$core$Maybe$Nothing);
 };
-var elm$browser$Browser$document = _Browser_document;
-var author$project$Main$main = elm$browser$Browser$document(
-	{as: author$project$Main$init, ay: author$project$Main$subscriptions, aA: author$project$Main$update, aC: author$project$Main$view});
+var elm$browser$Browser$application = _Browser_application;
+var author$project$Main$main = elm$browser$Browser$application(
+	{as: author$project$Main$init, au: author$project$Main$ChangedUrl, av: author$project$Main$ClickedLink, ay: author$project$Main$subscriptions, aA: author$project$Main$update, aC: author$project$Main$view});
 _Platform_export({'Main':{'init':author$project$Main$main(
 	elm$json$Json$Decode$succeed(0))(0)}});}(this));

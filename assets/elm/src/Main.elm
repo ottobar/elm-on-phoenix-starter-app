@@ -1,8 +1,10 @@
 module Main exposing (main)
 
 import Browser exposing (Document)
+import Browser.Navigation as Nav
 import Html exposing (..)
 import Html.Attributes exposing (attribute, class, href, id, type_)
+import Url exposing (Url)
 
 
 
@@ -17,8 +19,8 @@ type alias Model =
 -- INIT
 
 
-init : () -> ( Model, Cmd Msg )
-init _ =
+init : () -> Url -> Nav.Key -> ( Model, Cmd Msg )
+init _ url navKey =
     ( "Hello, Elm on Phoenix Starter App!", Cmd.none )
 
 
@@ -27,7 +29,9 @@ init _ =
 
 
 type Msg
-    = NoOp
+    = ChangedUrl Url
+    | ClickedLink Browser.UrlRequest
+    | NoOp
 
 
 
@@ -37,6 +41,12 @@ type Msg
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
+        ChangedUrl url ->
+            ( model, Cmd.none )
+
+        ClickedLink urlRequest ->
+            ( model, Cmd.none )
+
         NoOp ->
             ( model, Cmd.none )
 
@@ -96,9 +106,11 @@ subscriptions model =
 
 main : Program () Model Msg
 main =
-    Browser.document
+    Browser.application
         { init = init
         , update = update
         , view = view
         , subscriptions = subscriptions
+        , onUrlChange = ChangedUrl
+        , onUrlRequest = ClickedLink
         }
