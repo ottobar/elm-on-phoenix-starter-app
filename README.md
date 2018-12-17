@@ -4,7 +4,6 @@ This starter app uses:
   * (Optional) [asdf](https://github.com/asdf-vm/asdf) for version management
   * (Optional) [Visual Studio Code](https://code.visualstudio.com) for code editing
   * (Optional) [ElixirLS for VS Code](https://github.com/JakeBecker/vscode-elixir-ls) for Elixir support in VS Code
-  * [elm-brunch](https://github.com/madsflensted/elm-brunch) Brunch plugin to compile Elm code
   * [Bootstrap](https://getbootstrap.com) for styling and components
   * [Font Awesome](https://fontawesome.com) for icons
   * [PostgreSQL](https://www.postgresql.org) for database (using `postgres` user)
@@ -19,11 +18,12 @@ This starter app uses:
 
 
 TODO:
-  * Add [elm-test](https://github.com/elm-community/elm-test) to unit test Elm code
+  * Add [elm-test](https://github.com/elm-explorations/test) to unit test Elm code
 
 
 Steps used to create this starter app:
 
+  * TBD
   * `mix phx.new #{app_name}`
   * `cd #{app_name}`
   * `asdf local erlang #{erlang_version}`

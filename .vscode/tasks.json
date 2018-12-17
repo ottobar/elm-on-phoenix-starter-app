@@ -2,19 +2,20 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Phoenix Web Server",
-      "type": "shell",
-      "command": "mix phx.server",
-      "problemMatcher": []
-    },
-    {
       "group": {
         "kind": "test",
         "isDefault": true
       },
-      "label": "Run mix tests",
+      "label": "Tests",
       "type": "shell",
-      "command": "mix test"
+      "command": "mix test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Phoenix Web Server",
+      "type": "shell",
+      "command": "mix phx.server",
+      "problemMatcher": []
     }
   ]
 }
