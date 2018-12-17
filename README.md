@@ -34,15 +34,16 @@ Steps used to create this starter app:
   * Configure task for Visual Studio Code to run Tests and the Phoenix web server
   * Ignore ElixirLS build artifacts directory `.elixir_ls`
   * Get production configuration from environment rather than `config/prod.secret.exs`
-  * TBD
   * Still in `assets` directory...
-  * `npm install --save-dev elm elm-brunch`
+  * `npm install --save-dev elm-webpack-loader`
+  * Modify `webpack.config.js` rules to include the loader for Elm files
   * `mkdir elm`
-  * Modify `brunch-config.js` watched paths to include `elm` and add elm-brunch plugin config
-  * Also modify `brunch-config.js` to bundle vendor, main, and app Javascript files separately
   * `cd elm`
-  * `../node_modules/elm/bin/elm init` to create `elm.json` and `src` directory
-  * `../node_modules/elm/bin/elm install elm/url` to add elm/url as a direct dependency
+  * `../node_modules/.bin/elm init` to create `elm.json` and `src` directory
+  * `../node_modules/.bin/elm install elm/url` to add elm/url as a direct dependency
+  * ??? Modify `brunch-config.js` watched paths to include `elm` and add elm-brunch plugin config
+  * ??? Also modify `brunch-config.js` to bundle vendor, main, and app Javascript files separately
+  * TBD
   * Ignore Elm build artifacts directory `elm-stuff`
   * Create `assets/elm/src/Main.elm`
   * Create and add `assets/static/images/.gitkeep`
