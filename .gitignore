@@ -43,3 +43,6 @@ npm-debug.log
 
 # ElixirLS build artifacts
 /.elixir_ls
+
+# Elm build artifacts
+/assets/elm/elm-stuff/*

@@ -43,9 +43,9 @@ Steps used to create this starter app:
   * `../node_modules/.bin/elm install elm/url` to add elm/url as a direct dependency
   * ??? Modify `brunch-config.js` watched paths to include `elm` and add elm-brunch plugin config
   * ??? Also modify `brunch-config.js` to bundle vendor, main, and app Javascript files separately
-  * TBD
   * Ignore Elm build artifacts directory `elm-stuff`
   * Create `assets/elm/src/Main.elm`
+  * TBD
   * Create and add `assets/static/images/.gitkeep`
   * Remove `assets/static/images/phoenix.png`
   * Modify UI files to embed Elm application:
