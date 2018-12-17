@@ -28,13 +28,13 @@ Steps used to create this starter app:
   * `asdf local erlang #{erlang_version}`
   * `asdf local elixir #{elixir_version}`
   * `asdf local nodejs #{nodejs_version}`
-  * TBD
   * `mix deps.get`
   * `mix ecto.create`
   * `cd assets && npm install`
   * Configure task for Visual Studio Code to run Tests and the Phoenix web server
   * Ignore ElixirLS build artifacts directory `.elixir_ls`
   * Get production configuration from environment rather than `config/prod.secret.exs`
+  * TBD
   * Still in `assets` directory...
   * `npm install --save-dev elm elm-brunch`
   * `mkdir elm`

@@ -66,6 +66,13 @@ config :logger, level: :info
 # Note you can't rely on `System.get_env/1` when using releases.
 # See the releases documentation accordingly.
 
-# Finally import the config/prod.secret.exs which should be versioned
-# separately.
-import_config "prod.secret.exs"
+config :elm_on_phoenix_starter_app, ElmOnPhoenixStarterAppWeb.Endpoint,
+  secret_key_base: System.get_env("SECRET_KEY_BASE")
+
+config :elm_on_phoenix_starter_app, ElmOnPhoenixStarterApp.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: System.get_env("DATABASE_USERNAME"),
+  password: System.get_env("DATABASE_PASSWORD"),
+  host: System.get_env("DATABASE_HOST"),
+  database: System.get_env("DATABASE_NAME"),
+  pool_size: System.get_env("DATABASE_POOL_SIZE")
