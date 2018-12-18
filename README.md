@@ -57,5 +57,6 @@ Steps used to create this starter app:
   * `npm install --save bootstrap jquery popper.js @fortawesome/fontawesome-free`
   * `npm install --save-dev file-loader`
   * Modify `webpack.config.js` rules to include the loader for FontAwesome font files
+  * Modify `assets/js/app.js` to import Bootstap and FontAwesome
   * Modify `assets/css/app.css` to include margin for navbar
   * Modify `assets/elm/src/Main.elm` for starter template with Bootstrap and Font Awesome
