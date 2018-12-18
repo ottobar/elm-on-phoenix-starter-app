@@ -41,11 +41,8 @@ Steps used to create this starter app:
   * `cd elm`
   * `../node_modules/.bin/elm init` to create `elm.json` and `src` directory
   * `../node_modules/.bin/elm install elm/url` to add elm/url as a direct dependency
-  * ??? Modify `brunch-config.js` watched paths to include `elm` and add elm-brunch plugin config
-  * ??? Also modify `brunch-config.js` to bundle vendor, main, and app Javascript files separately
   * Ignore Elm build artifacts directory `elm-stuff`
   * Create `assets/elm/src/Main.elm`
-  * TBD
   * Create and add `assets/static/images/.gitkeep`
   * Remove `assets/static/images/phoenix.png`
   * Modify UI files to embed Elm application:
@@ -54,15 +51,11 @@ Steps used to create this starter app:
     * `lib/#{app_name_web}/templates/page/index.html.eex`
   * Modify page controller test so that it can pass `test/#{app_name_web}/controllers/page_controller_test.exs`
   * Add default mix test task to `.vscode/tasks.json`
+  * Remove phoenix.css import from `assets/css/app.css` 
   * Remove `assets/css/phoenix.css`
-  * In `assets` directory, `mkdir -p vendor/css vendor/js`
-  * Download Bootstrap and put compiled and minified css and js files into `assets/vendor/css` and `assets/vendor/js` directories, respectively
-  * Download slim, compressed, production jQuery and put into `assets/vendor/js` directory
-  * Download unpkg, minified Popper.js and put into `assets/vendor/js` directory
-  * Download Font Awesome
-    * Put `web-fonts-with-css/css/fontawesome-all.min.css` into `assets/vendor/css` directory
-    * Put `web-fonts-with-css/webfonts` directory and contents into `assets/static` directory
-  * Modify `lib/#{app_name_web}/templates/layout/app.html.eex` for Bootstrap and include vendor and main Javascript bundles
-  * Add `webfonts` directory in `lib/#{app_name_web}/endpoint.ex` to the static plug
+  * `cd ../` to go to `assets` directory
+  * `npm install --save bootstrap jquery popper.js @fortawesome/fontawesome-free`
+  * `npm install --save-dev file-loader`
+  * Modify `webpack.config.js` rules to include the loader for FontAwesome font files
   * Modify `assets/css/app.css` to include margin for navbar
   * Modify `assets/elm/src/Main.elm` for starter template with Bootstrap and Font Awesome
