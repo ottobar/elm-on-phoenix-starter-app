@@ -7,9 +7,10 @@ guard("mix test", run_on_start: true)
   {~r{lib/(?<lib_dir>.+_web)/(?<dir>.+)/(?<file>.+).ex$}i,
    fn m -> "test/#{m["lib_dir"]}/#{m["dir"]}/#{m["file"]}_test.exs" end}
 )
+# run test file when it has changes
 |> watch(
-  {~r{test/(?<test_dir>.+)/(?<dir>.+)/(?<file>.+)_test.exs$}i,
-   fn m -> "test/#{m["test_dir"]}/#{m["dir"]}/#{m["file"]}_test.exs" end}
+  {~r{test/(?<dir>.+)/(?<file>.+)_test.exs$}i,
+   fn m -> "test/#{m["dir"]}/#{m["file"]}_test.exs" end}
 )
 # only if the above pattern doesn't match try to match all elixir/erlang source
 |> watch(~r{\.(erl|ex|exs|eex|xrl|yrl)\z}i)
