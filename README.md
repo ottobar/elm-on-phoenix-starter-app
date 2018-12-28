@@ -4,6 +4,7 @@ This starter app uses:
   * (Optional) [asdf](https://github.com/asdf-vm/asdf) for version management
   * (Optional) [Visual Studio Code](https://code.visualstudio.com) for code editing
   * (Optional) [ElixirLS for VS Code](https://github.com/JakeBecker/vscode-elixir-ls) for Elixir support in VS Code
+  * [ExGuard](https://hex.pm/packages/ex_guard) to automatically run tests, etc.
   * [Bootstrap](https://getbootstrap.com) for styling and components
   * [Font Awesome](https://fontawesome.com) for icons
   * [PostgreSQL](https://www.postgresql.org) for database (using `postgres` user)
@@ -60,3 +61,4 @@ Steps used to create this starter app:
   * Modify `assets/js/app.js` to import Bootstap and FontAwesome
   * Modify `assets/css/app.css` to include margin for navbar
   * Modify `assets/elm/src/Main.elm` for starter template with Bootstrap and Font Awesome
+  * Install ExGuard and configure

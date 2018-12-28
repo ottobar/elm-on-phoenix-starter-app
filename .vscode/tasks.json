@@ -12,9 +12,27 @@
       "problemMatcher": []
     },
     {
+      "label": "Guard",
+      "type": "shell",
+      "command": "mix guard",
+      "problemMatcher": []
+    },
+    {
       "label": "Phoenix Web Server",
       "type": "shell",
       "command": "mix phx.server",
+      "problemMatcher": []
+    },
+    {
+      "label": "IEx",
+      "type": "shell",
+      "command": "iex -S mix",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated"
+      },
       "problemMatcher": []
     }
   ]
