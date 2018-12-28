@@ -61,4 +61,5 @@ Steps used to create this starter app:
   * Modify `assets/js/app.js` to import Bootstap and FontAwesome
   * Modify `assets/css/app.css` to include margin for navbar
   * Modify `assets/elm/src/Main.elm` for starter template with Bootstrap and Font Awesome
-  * Install ExGuard and configure
+  * Install ExGuard and configure in `.exguard.exs`
+  * Customize 404 and 500 error pages

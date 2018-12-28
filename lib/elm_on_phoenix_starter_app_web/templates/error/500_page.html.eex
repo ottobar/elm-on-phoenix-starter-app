@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Elm on Phoenix Starter App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  </head>
+  <body class="py-5">
+    <div class="container text-center">
+      <div class="jumbotron">
+        <h1 class="display-4">Internal Server Error (500)</h1>
+        <p class="lead">We're sorry, but something went wrong.</p>
+        <hr class="my-4">
+        <p>We apologize for the inconvience. Please try again later.</p>
+      </div>
+    </div>
+  </body>
+</html>
